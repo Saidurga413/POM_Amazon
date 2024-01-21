@@ -18,7 +18,7 @@ public class LoginTest extends WebDriverUtils{
 		System.out.println(properties.getProperty("url"));
 		
 		commonUtils.launchURL(properties.getProperty("url"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		WebElement ele = driver.findElement(By.xpath("//span[text()='Hello, sign in']"));
 		ele.click();

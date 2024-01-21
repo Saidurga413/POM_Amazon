@@ -55,7 +55,7 @@ public class ProductSearchAndAddInCartTest extends WebDriverUtils{
 				break;
 			}
 		}
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
 		//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']
 		WebElement ggg1 = driver.findElement(By.xpath("//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']"));
