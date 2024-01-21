@@ -65,7 +65,7 @@ public class WebDriverUtils extends PageInitialiser{
 	@BeforeSuite(alwaysRun=true)
 	protected void extentReport() {
 		System.out.println("Before Suite");
-		htmlReporter = new ExtentSparkReporter("ExtentReport.html");
+		htmlReporter = new ExtentSparkReporter("Amazon\\ExtentReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 

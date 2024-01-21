@@ -1,34 +1,35 @@
 package Amazon.Login.Test;
 
+import com.aventstack.extentreports.Status;
 
+import java.io.IOException;
 
 import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.Amazon.utils.ExcelUtils;
+import com.Ecom.Amazon.utils.CaptureScreenshot;
 import com.Ecom.Amazon.utils.WebDriverUtils;
 
 public class LoginTest extends WebDriverUtils{
 	
 	@Test(groups= {"Smoke"}) 
 	public void login() throws InterruptedException {
-		System.out.println("Amit");
+		
+		test = extent.createTest("Login_Amazon", "This is the test case to validate whether user is able to login into the application");	
+		
 		System.out.println(properties.getProperty("url"));
+		test.log(Status.INFO, "User has the url to login : "+ properties.getProperty("url"));
 		
 		commonUtils.launchURL(properties.getProperty("url"));
 		Thread.sleep(10000);
-		
-		WebElement ele = driver.findElement(By.xpath("//span[text()='Hello, sign in']"));
-		ele.click();
+	
+		loginPage.click_OnSign();
 		Thread.sleep(5000);
 		
-		//input[@id='ap_email']
-		WebElement ele1 = driver.findElement(By.xpath("//input[@id='ap_email']"));
-		ele1.click();
-		ele1.clear();
-		Thread.sleep(5000);
 		/** Enter Username & Password **/
 		String filepath = properties.getProperty("TestData");
 		JSONObject username = new JSONObject();
@@ -40,33 +41,31 @@ public class LoginTest extends WebDriverUtils{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-//		loginPage.enter_userName(username.getString("Username"));
-//		loginPage.enter_password(password.getString("Password"));
-		ele1.sendKeys(username.getString("Username"));
 		
-		
-		
-		
-		WebElement ele3 = driver.findElement(By.xpath("//input[@id='continue']"));
-		ele3.click();
-		Thread.sleep(5000);
-		
-		//driver.close();
-		//ap_password
-		WebElement ele33 = driver.findElement(By.xpath("//input[@id='ap_password']"));
-		ele33.click();
-		ele33.clear();
-		Thread.sleep(5000);
-		ele33.sendKeys(password.getString("Password"));
-		
-		//signInSubmit
-		WebElement ele34 = driver.findElement(By.xpath("//input[@id='signInSubmit']"));
-		ele34.click();
+		loginPage.enter_UserName(username.getString("Username"));
 		Thread.sleep(5000);
 		
 		
+		loginPage.click_Continue();
+		Thread.sleep(5000);
 		
+		
+		loginPage.enter_Password(password.getString("Password"));
+		
+		Thread.sleep(5000);
+		
+		loginPage.click_Submit();
+		Thread.sleep(5000);
+		
+		//Take a snap 
+		try {
+			test.info("Test execution snapshot below: ", MediaEntityBuilder.createScreenCaptureFromPath(new CaptureScreenshot().captureScreen()).build());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		test.log(Status.PASS, "User has logged into the application");
 		
 		
 		
