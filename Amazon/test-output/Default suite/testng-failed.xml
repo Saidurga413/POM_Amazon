@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest">
+      <class name="Amazon.Login.Test.LoginTest">
         <methods>
+          <include name="login"/>
           <include name="initializaton"/>
           <include name="publish_extent"/>
-          <include name="productSearch"/>
           <include name="tearDown"/>
           <include name="extentReport"/>
         </methods>
-      </class> <!-- Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest -->
+      </class> <!-- Amazon.Login.Test.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
