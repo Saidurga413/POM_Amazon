@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-21T13:38:39 IST" name="Default suite" finished-at="2024-01-21T13:40:06 IST" duration-ms="87832">
+  <suite started-at="2024-01-22T16:49:11 IST" name="Default suite" finished-at="2024-01-22T16:49:56 IST" duration-ms="44911">
     <groups>
       <group name="Smoke">
-        <method signature="ProductSearchAndAddInCartTest.productSearchAndAddInCartTest()[pri:0, instance:Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest@7bab3f1a]" name="productSearchAndAddInCartTest" class="Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest"/>
+        <method signature="LoginTest.login()[pri:0, instance:Amazon.Login.Test.LoginTest@7bab3f1a]" name="login" class="Amazon.Login.Test.LoginTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-01-21T13:38:39 IST" name="Default test" finished-at="2024-01-21T13:40:06 IST" duration-ms="87832">
-      <class name="Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest">
-        <test-method is-config="true" signature="extentReport()[pri:0, instance:Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest@7bab3f1a]" started-at="2024-01-21T13:38:38 IST" name="extentReport" finished-at="2024-01-21T13:38:39 IST" duration-ms="291" status="PASS">
+    <test started-at="2024-01-22T16:49:11 IST" name="Default test" finished-at="2024-01-22T16:49:56 IST" duration-ms="44911">
+      <class name="Amazon.Login.Test.LoginTest">
+        <test-method is-config="true" signature="extentReport()[pri:0, instance:Amazon.Login.Test.LoginTest@7bab3f1a]" started-at="2024-01-22T16:49:10 IST" name="extentReport" finished-at="2024-01-22T16:49:11 IST" duration-ms="203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReport -->
-        <test-method is-config="true" signature="initializaton()[pri:0, instance:Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest@7bab3f1a]" started-at="2024-01-21T13:38:39 IST" name="initializaton" finished-at="2024-01-21T13:38:40 IST" duration-ms="1775" status="PASS">
+        <test-method is-config="true" signature="initializaton()[pri:0, instance:Amazon.Login.Test.LoginTest@7bab3f1a]" started-at="2024-01-22T16:49:11 IST" name="initializaton" finished-at="2024-01-22T16:49:12 IST" duration-ms="1466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializaton -->
-        <test-method signature="productSearchAndAddInCartTest()[pri:0, instance:Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest@7bab3f1a]" started-at="2024-01-21T13:38:40 IST" name="productSearchAndAddInCartTest" finished-at="2024-01-21T13:40:06 IST" duration-ms="85587" status="PASS">
+        <test-method signature="login()[pri:0, instance:Amazon.Login.Test.LoginTest@7bab3f1a]" started-at="2024-01-22T16:49:12 IST" name="login" finished-at="2024-01-22T16:49:55 IST" duration-ms="43207" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productSearchAndAddInCartTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest@7bab3f1a]" started-at="2024-01-21T13:40:06 IST" name="tearDown" finished-at="2024-01-21T13:40:06 IST" duration-ms="438" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.Login.Test.LoginTest@7bab3f1a]" started-at="2024-01-22T16:49:55 IST" name="tearDown" finished-at="2024-01-22T16:49:56 IST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="publish_extent()[pri:0, instance:Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest@7bab3f1a]" started-at="2024-01-21T13:40:06 IST" name="publish_extent" finished-at="2024-01-21T13:40:07 IST" duration-ms="924" status="PASS">
+        <test-method is-config="true" signature="publish_extent()[pri:0, instance:Amazon.Login.Test.LoginTest@7bab3f1a]" started-at="2024-01-22T16:49:56 IST" name="publish_extent" finished-at="2024-01-22T16:49:56 IST" duration-ms="293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publish_extent -->
-      </class> <!-- Amazon.ProductSearchAndAddInCart.Test.ProductSearchAndAddInCartTest -->
+      </class> <!-- Amazon.Login.Test.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

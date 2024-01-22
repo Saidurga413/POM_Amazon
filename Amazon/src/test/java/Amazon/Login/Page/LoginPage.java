@@ -57,5 +57,10 @@ public class LoginPage extends CommonUtils{
 		click(Submit);
 		
 	}
+	
+	public String homePageTitle() {
+		String title = driver.getTitle();
+		return title;
+	}
 
 }

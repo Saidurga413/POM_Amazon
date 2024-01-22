@@ -95,7 +95,7 @@ public static List<Map<String,String>> getTestDetails(String sheetname) throws I
 		FileInputStream fs = null;
 		Map<String,String> map = null;
 		
-		String absPath = new File("src\\\\main\\\\resources\\\\TestData_FarmerAPK.xlsx").getAbsolutePath();
+		String absPath = new File("src\\\\main\\\\resources\\\\TestData1.xlsx").getAbsolutePath();
 		
 			fs = new FileInputStream(absPath);
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);

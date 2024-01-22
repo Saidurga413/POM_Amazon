@@ -57,6 +57,16 @@ public class LoginTest extends WebDriverUtils{
 		loginPage.click_Submit();
 		Thread.sleep(5000);
 		
+		String expectedTitle = loginPage.homePageTitle();
+		test.log(Status.INFO, "Home Page Title recored from Web application " + expectedTitle);
+
+		String actualTitle = properties.getProperty("HomePageTitle");
+		test.log(Status.INFO, "Actual Title is " + actualTitle);
+
+		//Validating the title in homepage after login
+		Thread.sleep(2000);
+		Assert.assertEquals(actualTitle, expectedTitle);
+		
 		//Take a snap 
 		try {
 			test.info("Test execution snapshot below: ", MediaEntityBuilder.createScreenCaptureFromPath(new CaptureScreenshot().captureScreen()).build());

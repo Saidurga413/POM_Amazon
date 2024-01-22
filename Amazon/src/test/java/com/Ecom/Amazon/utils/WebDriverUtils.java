@@ -19,6 +19,7 @@ import org.testng.log4testng.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
@@ -101,9 +102,11 @@ public class WebDriverUtils extends PageInitialiser{
 			
 			chromeOptions.addArguments("--start-maximized");
 			return new ChromeDriver(chromeOptions);
-		} else if (browserName.equalsIgnoreCase("FF")) {
-			System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\Driver\\geckodriver-v0.33.0-win64\\geckodriver.exe");
-			return new FirefoxDriver();
+		} else if (browserName.equalsIgnoreCase("EDGE")) {
+			//System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\Driver\\geckodriver-v0.33.0-win64\\geckodriver.exe");
+			//return new FirefoxDriver();
+			WebDriverManager.edgedriver().setup();
+			return new EdgeDriver();
 		} else if (browserName.equalsIgnoreCase("IE")) {
 			System.setProperty("webdriver.ie.driver","<Add location>");
 			return new InternetExplorerDriver();

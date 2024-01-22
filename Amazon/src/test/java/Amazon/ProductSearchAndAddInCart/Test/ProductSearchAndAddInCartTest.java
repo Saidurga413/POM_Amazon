@@ -46,6 +46,12 @@ public class ProductSearchAndAddInCartTest extends WebDriverUtils{
 		Thread.sleep(8000);
 		
 		productSearchPageAndAddInCartPages.click_Cart();
+		try {
+			test.info("Test execution snapshot below: ", MediaEntityBuilder.createScreenCaptureFromPath(new CaptureScreenshot().captureScreen()).build());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Thread.sleep(5000);
 		driver.switchTo().window(OriginalTab);
 		
